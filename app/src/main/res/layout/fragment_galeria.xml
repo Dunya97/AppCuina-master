@@ -1,26 +1,31 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:visibility="visible"
+    android:background="@color/colorAccent"
     tools:context="maindish.com.projprog.GaleriaFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:orientation="vertical"
-        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:weightSum="10"
         tools:ignore="ExtraText">
 
         <TextView
             android:id="@+id/titulo"
-            android:layout_width="match_parent"
+            android:layout_width="385dp"
             android:layout_height="wrap_content"
-            android:background="#000000"
-            android:textColor="#FFFFFF" />
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
 
         <!--
         android:adjustViewBounds="false"
@@ -29,27 +34,41 @@
         <ImageView
             android:id="@+id/imagen"
             android:layout_width="match_parent"
-            android:layout_height="216dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="4"
             android:scaleType="fitXY"
-            android:src="@drawable/myimage" />
+            android:src="@drawable/myimage"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@color/colorAccent"
             android:textColor="#FFFFFF" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/galeria"
-            android:layout_width="match_parent"
-            android:layout_height="196dp"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="2"
             android:scrollbars="horizontal">
 
         </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="56dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/listview"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </FrameLayout>

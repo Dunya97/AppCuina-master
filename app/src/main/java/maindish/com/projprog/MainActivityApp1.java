@@ -76,10 +76,13 @@ public class MainActivityApp1 extends AppCompatActivity implements View.OnClickL
                     //Inciem l'activitat aqui per en cas que ja estigui logged no faci log screen
                    //Intent i = new Intent(MainActivityApp1.this, GaleriaFragment.class);
                    //startActivity(i);
-                    android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+                    /*android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
                     GaleriaFragment galeria = new GaleriaFragment();
                     galeria.setStyle(DialogFragment.STYLE_NO_FRAME,R.style.transparente);
-                    galeria.show(manager,"");
+                    galeria.show(manager,"");*/
+                    Intent List = new Intent(getApplicationContext(), GaleriaFragment.class);
+                    startActivity(List);
+
                 } else {
                     Log.e("SESION", task.getException().getMessage() + "");
                 }

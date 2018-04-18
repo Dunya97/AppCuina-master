@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="maindish.com.projprog.MainFeed"></activity>
+        <activity android:name="maindish.com.projprog.GaleriaFragment"></activity>
     </application>
 
 </manifest>

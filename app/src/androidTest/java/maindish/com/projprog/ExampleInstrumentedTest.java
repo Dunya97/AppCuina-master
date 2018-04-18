@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-       assertEquals("maindish.com.app1", appContext.getPackageName());
+       assertEquals("maindish.com.projprog", appContext.getPackageName());
    }
 }
